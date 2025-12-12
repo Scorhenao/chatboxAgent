@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot ADSO – Desarrollo de Software</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <h1>Chatbot ADSO – Desarrollo de Software</h1>
+        <p class="subtitle">
+          Pregunta sobre programación, buenas prácticas y desarrollo de software.
+        </p>
+      </header>
+
+      <main class="chat-container">
+        <div id="chat-window" class="chat-window"></div>
+
+        <div id="typing-indicator" class="typing-indicator hidden">
+          El agente está pensando…
+        </div>
+
+        <form id="chat-form" class="chat-form">
+          <textarea
+            id="user-input"
+            placeholder="Escribe tu pregunta sobre desarrollo de software..."
+            rows="3"
+          ></textarea>
+          <button id="send-button" type="submit">Enviar</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
